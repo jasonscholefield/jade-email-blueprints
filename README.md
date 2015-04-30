@@ -86,7 +86,3 @@ A basic example is available for you to get you started, but feel free to start 
 Head to `http://localhost:8000/` to view your generated html files.
 
 Open up your text editor and start editing files in `src/`. This is where all jade, scss and image files can be found.
-
----
-#### Credits
-This is an iteration of https://github.com/EightMedia/eightmailboilerplate.
