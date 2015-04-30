@@ -1,19 +1,18 @@
-![](https://raw.github.com/EightMedia/eightmailboilerplate/master/github/header.jpg)
-
-This set of Gulp tasks removes a little bit of hassle from the tedious process of crafting e-mail templates.
+This set of Gulp tasks aims to remove the headache of email template creation.
 
 ---
 ## Features
-* Jade templates (with some smart mixins)
+* Jade templates
+* Jade Mixins including: All sorts of table components & arrangements, Campaign Monitor's Bulletproof Buttons & Bulletproof Backgrounds
 * Automatic css inlining and SASS stylesheets
-* Export for Campaign Monitor or package in a zip file
-* Quick test emails through the command line
+* Export for Campaign Monitor or package in a zip file (WIP)
+* Quick test emails through the command line (WIP)
 
 ---
-#### Clean Jade templates (with some smart mixins)
-HTML tables are hard to write and hard to read. This is why you should use some form of preprocessor to make this job easier. We use jade mixins for tables, buttons and spacers so you don't have to spell those out again and again.
+#### Jade templates
+HTML tables are hard to write and even harder to read. Using a preprocessor aims to alleviate that headache. I use jade mixins for tables, multi column layouts, buttons (plus bulletproof), backgrounds (plus bulletproof), and spacers so you don't get lose in the nested table nightmares.
 
-![](https://raw.github.com/EightMedia/eightmailboilerplate/master/github/jade.jpg)
+![](https://raw.github.com/DeckardPain/jade-email-blueprints/master/github/jade.jpg)
 
 ---
 
@@ -22,7 +21,7 @@ Write your css in an external file and get all those styles automatically inline
 
 Keep your styles in an external SASS file and use clever variables to keep your code clean.
 
-![](https://raw.github.com/EightMedia/eightmailboilerplate/master/github/css.jpg)
+![](https://raw.github.com/DeckardPain/jade-email-blueprints/master/github/css.jpg)
 
 
 ---
@@ -62,21 +61,26 @@ You can test your mailing from the command line. Before you can send a test mail
 }
 ```
 
-now run `gulp testmail` to send those emails to yourself for testing.
+now run 'gulp testmail' to send those emails to yourself for testing.
 
 
 ---
 #### Basic template provided
 A basic example is available for you to get you started, but feel free to start from scratch. 
 
-![](https://raw.github.com/EightMedia/eightmailboilerplate/master/github/responsive.jpg)
+![](https://raw.github.com/DeckardPain/jade-email-blueprints/master/github/responsive.jpg)
 
 ---
 # Getting started
 1. clone this repository
-2. `npm install`
-3. `gulp`
+2. 'npm install'
+3. 'npm install express'
+3. 'gulp'
+
+// I was having issues with express, so line 3 is a temporary fix. I'm just too lazy to fix it in the gulp file right now.
 
 Head to `http://localhost:8000/` to view your generated html files.
 
 Open up your text editor and start editing files in `src/`. This is where all jade, scss and image files can be found.
+
+This is an iteration of https://github.com/EightMedia/eightmailboilerplate.
