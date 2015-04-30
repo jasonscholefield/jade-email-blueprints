@@ -19,13 +19,13 @@ HTML tables are hard to write and even harder to read. Using a preprocessor aims
 #### SASS and automatic CSS inlining
 Write your css in an external file and get all those styles automatically inlined. Stylesheets will also be included in the head of the file so your media queries will work nicely.
 
-Keep your styles in an external SASS file and use clever variables to keep your code clean.
+Keep your styles in an external SASS file and use variables to keep your code clean.
 
 ![](https://raw.github.com/DeckardPain/jade-email-blueprints/master/github/css.jpg)
 
 
 ---
-#### Gulp tasks for exporting
+#### Gulp tasks for exporting (WIP)
 `gulp export` generates a version-numbered-zip-file with images and html to send to your clients and an html file with img.zip to import into Campaign Monitor. These files can be found in `export/zip` and `export/campaignmonitor`.
 
 
@@ -37,18 +37,22 @@ It's easiest to work with one file for all the links and text contents. So edit 
 {
     "title": "My Fantastic Email",
     "website": {
-        "title": "google.nl",
-        "href": "http://www.google.com/"
+      "title": "google.nl",
+      "href": "http://www.google.com/"
     },
     "unsubscribe": "http://www.google.com/unsubscribe",
     "webversion": "http://www.google.com/webversion",
     "facebook_url": "https://www.facebook.com/",
-    "twitter_url": "https://twitter.com/"
+    "twitter_url": "https://twitter.com/",
+    "cta_lipsum": {
+      "title": "Lorem Ipsum",
+      "href": "http://www.lipsum.com/"
+    }
 }
 ```
 
 ---
-#### Command line testmails
+#### Command line testmails (WIP)
 You can test your mailing from the command line. Before you can send a test mail, create a config.json in the root of the project:
 
 ```
@@ -83,4 +87,6 @@ Head to `http://localhost:8000/` to view your generated html files.
 
 Open up your text editor and start editing files in `src/`. This is where all jade, scss and image files can be found.
 
+---
+#### Credits
 This is an iteration of https://github.com/EightMedia/eightmailboilerplate.
