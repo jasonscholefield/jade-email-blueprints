@@ -1,0 +1,78 @@
+include ./mixins/_buttons
+include ./mixins/_images
+include ./mixins/_spacers
+include ./mixins/_tables
+include ./mixins/_text
+
+doctype html
+html(lang="nl")
+	head
+		title #{data.title}
+
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0,")
+
+		style(type="text/css"): include ../dist/css/styles.css
+		style(type="text/css"): include ../dist/css/responsive.css
+
+	body
+		#container
+			+table#main
+				+spacer-row
+				tr
+					td &nbsp;
+					td#container-width(width='600')
+
+						+table#preheader
+							tr: td: .p
+								| Can't read this e-mail?
+								a(href='#{data.webversion}') click here
+							+spacer-row-small
+
+
+						// content
+						+table#content(bgcolor='#ffffff')
+
+							+image-row
+								a#logo-link(href='#{data.website.href}')
+									img#logo(src='http://placehold.it/600x150/1D1F21/ffffff&text=logo', width='600', height='150', alt='#{data.title}')
+							+spacer-row
+
+
+							+spacer-row-small
+
+							// intro
+							+text-row 
+								.title #{data.title}
+
+							+text-row 
+								.p 
+									|	Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+
+							+text-row 
+								.p
+									|	Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+
+							+text-row
+								+button(title="my button", href="#{data.website.href}")
+
+							+text-row
+								+bp-button(title-"bulletproof button", href="#{data.cta_lipsum.href}")
+
+							+spacer-row
+
+
+						// footer
+						+table.footer(bgcolor='#ffffff')
+							+spacer-row
+							+text-block
+								.title Disclaimer
+							+text-block
+								.p
+									|	Dramatically maintain clicks-and-mortar solutions without functional solutions because you subscribed at #{data.website.title}
+							+text-row
+								.p
+									|	Copyright &copy; All rights reserved.
+
+					td &nbsp;
+				tr: td(height='30', colspan='3')
